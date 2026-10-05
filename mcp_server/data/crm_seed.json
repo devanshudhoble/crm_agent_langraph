@@ -1,0 +1,139 @@
+{
+  "customers": [
+    {
+      "id": "CUST-001",
+      "name": "ABC Corp",
+      "aliases": ["abc", "abc corp", "abc corporation"],
+      "industry": "Financial Services & Banking (BFSI)",
+      "tier": "Tier-1 Strategic Enterprise",
+      "annual_revenue": "$120M",
+      "primary_contact": {
+        "name": "Rajesh Sharma",
+        "title": "Chief Technology Officer (CTO)",
+        "email": "r.sharma@abccorp.in",
+        "phone": "+91-98200-11223"
+      },
+      "account_executive": "Priya Nair",
+      "solutions_architect": "Arun Verma",
+      "health_score": 78,
+      "headquarters": "Mumbai, Maharashtra, India"
+    },
+    {
+      "id": "CUST-002",
+      "name": "Zenith Cloud Solutions",
+      "aliases": ["zenith", "zenith cloud"],
+      "industry": "Software & SaaS",
+      "tier": "Tier-2 Mid-Market",
+      "annual_revenue": "$45M",
+      "primary_contact": {
+        "name": "Neha Patel",
+        "title": "Head of Engineering",
+        "email": "neha@zenithcloud.io",
+        "phone": "+91-98765-43210"
+      },
+      "account_executive": "Vikram Mehta",
+      "solutions_architect": "Karan Singhal",
+      "health_score": 92,
+      "headquarters": "Bengaluru, Karnataka, India"
+    }
+  ],
+  "deals": [
+    {
+      "id": "DEAL-8841",
+      "customer_id": "CUST-001",
+      "customer_name": "ABC Corp",
+      "title": "Enterprise AI Platform Rollout - Banking Core",
+      "value_inr": "₹25,00,000 (₹25L)",
+      "value_numeric": 2500000,
+      "currency": "INR",
+      "stage": "Proposal / Contract Negotiation",
+      "probability": 75,
+      "target_close_date": "2026-11-15",
+      "interested_product": "Enterprise AI",
+      "product_code": "PROD-ENT-AI",
+      "notes": "CTO Rajesh Sharma is sponsoring the initiative to automate customer compliance KYC and query routing using agentic copilot."
+    },
+    {
+      "id": "DEAL-8842",
+      "customer_id": "CUST-002",
+      "customer_name": "Zenith Cloud Solutions",
+      "title": "Cloud Infra Monitoring Modernization",
+      "value_inr": "₹15,00,000 (₹15L)",
+      "value_numeric": 1500000,
+      "currency": "INR",
+      "stage": "Technical Evaluation",
+      "probability": 60,
+      "target_close_date": "2026-12-01",
+      "interested_product": "Cloud Observability Suite",
+      "product_code": "PROD-CLOUD-OBS",
+      "notes": "Evaluation team testing OpenTelemetry ingestion rate."
+    }
+  ],
+  "interactions": [
+    {
+      "id": "INT-501",
+      "customer_id": "CUST-001",
+      "date": "2026-09-28",
+      "channel": "Executive Zoom Meeting",
+      "participants": ["Rajesh Sharma (CTO)", "Priya Nair (Sales Lead)", "Arun Verma (Solutions Architect)"],
+      "summary": "Deep-dive architecture walkthrough on Enterprise AI latency and compliance guardrails for banking. CTO Rajesh Sharma expressed strong commitment to proceed with ₹25L deployment, but voiced friction regarding two ongoing support tickets causing data sync timeouts in their staging sandbox.",
+      "sentiment": "Cautiously Positive",
+      "action_items": [
+        "Investigate batch API timeout support ticket TICK-9021",
+        "Prepare meeting agenda for next alignment session resolving technical hurdles",
+        "Provide BFSI case study reference"
+      ]
+    },
+    {
+      "id": "INT-489",
+      "customer_id": "CUST-001",
+      "date": "2026-09-12",
+      "channel": "In-Person Executive Briefing (Mumbai HQ)",
+      "participants": ["Rajesh Sharma (CTO)", "Devanand K (VP Digital)", "Priya Nair (Sales Lead)"],
+      "summary": "Initial product demo of Enterprise AI platform and LLM agent architecture. High enthusiasm from digital banking leadership.",
+      "sentiment": "Very Enthusiastic",
+      "action_items": ["Send technical security whitepaper and pricing proposal for ₹25L tier"]
+    }
+  ],
+  "support_tickets": [
+    {
+      "id": "TICK-9021",
+      "customer_id": "CUST-001",
+      "subject": "API timeout on batch data synchronization webhook",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "created_at": "2026-09-26",
+      "updated_at": "2026-10-04",
+      "impact": "Data sync delayed by 30-45 mins during peak hours on staging sandbox",
+      "assigned_to": "Infra Core Team (Tier-2)",
+      "root_cause_analysis": "Payload serialization overhead during heavy table dump. Patch v2.4.1 hotfix scheduled for deployment this week.",
+      "resolution_plan": "Patch ready for rollout; customer needs confirmation that timeout ceiling has been raised to 120s."
+    },
+    {
+      "id": "TICK-9034",
+      "customer_id": "CUST-001",
+      "subject": "Dashboard SSO token renewal fails intermittently",
+      "priority": "MEDIUM",
+      "status": "OPEN",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-10-03",
+      "impact": "Security team forced to re-login every 24h instead of 7-day session token",
+      "assigned_to": "Identity & Security Pod",
+      "root_cause_analysis": "SAML token lifetime mismatch with customer IdP cookie policy.",
+      "resolution_plan": "Configuration adjustment guide provided; pending client IdP team confirmation."
+    },
+    {
+      "id": "TICK-8812",
+      "customer_id": "CUST-001",
+      "subject": "Billing invoice discrepancy for Q2 sandbox compute",
+      "priority": "LOW",
+      "status": "RESOLVED",
+      "created_at": "2026-08-10",
+      "updated_at": "2026-08-15",
+      "impact": "Resolved with ₹12,000 credit memo adjustment",
+      "assigned_to": "Finance Ops",
+      "root_cause_analysis": "Metered billing calculation bug during multi-region test.",
+      "resolution_plan": "Credit memo applied and ticket closed."
+    }
+  ]
+}
